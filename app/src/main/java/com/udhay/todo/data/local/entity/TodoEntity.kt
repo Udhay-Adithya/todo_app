@@ -11,6 +11,6 @@ data class TodoEntity(
     @ColumnInfo(name = "description") val description : String,
     @ColumnInfo(name = "category") val category: String,
     @ColumnInfo(name = "priority") val priority : Int,
-    @ColumnInfo(name = "is_completed") val isCompleted : Boolean,
+    @ColumnInfo(name = "is_completed") val isCompleted : Boolean = false,
     @ColumnInfo(name = "created_at") val createdAt : Long = System.currentTimeMillis(),
     )

@@ -8,7 +8,7 @@ import javax.inject.Inject
 class TodoRepository @Inject constructor(private val todoDao: TodoDao) {
     fun getAllTodos() : Flow<List<TodoEntity>> = todoDao.getAllTodos()
 
-    suspend fun insertTodo(todo : TodoEntity) = todoDao.insertTodo(todo)
+    suspend fun addTodo(todo : TodoEntity) = todoDao.insertTodo(todo)
 
     suspend fun updateTodo(todo: TodoEntity) = todoDao.updateTodo(todo)
 
